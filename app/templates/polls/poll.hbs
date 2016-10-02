@@ -1,0 +1,26 @@
+<h4>Poll:</h4>
+
+<ul>
+  <li>
+    <h5>
+      id: {{model.id}}
+    </h5>
+  </li>
+  <li>
+    <h5>
+      name: {{model.name}}
+    </h5>
+  </li>
+</ul>
+<h6>here are questions:</h6>
+{{#each model.questions as |question|}}
+  {{question.prompt}}<br>
+
+  {{#each question.options as |option|}}
+    {{option.name}}<br>
+  {{/each}}
+{{/each}}
+
+
+{{link-to 'edit poll' 'polls.poll.edit'}}
+{{outlet}}

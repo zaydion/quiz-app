@@ -1,0 +1,21 @@
+<h2>Polls</h2>
+
+<p>These are from the model defined in the poll route:</p>
+
+{{#each model as |poll|}}
+<ul>
+  <li>
+    {{#link-to "polls.poll" poll}}
+      id: {{poll.id}} name: {{poll.name}}
+    {{/link-to}}
+  </li>
+</ul>
+{{/each}}
+
+
+{{link-to "view all polls" "polls"}} |
+{{link-to "make new poll" "polls.new"}}
+
+
+
+{{outlet}}
