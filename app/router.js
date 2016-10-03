@@ -12,7 +12,6 @@ Router.map(function() {
     this.route('new');
     this.route('poll', { path: '/:poll_id' }, function() {
       this.route('result');
-      this.route('edit');
     });
   });
 });

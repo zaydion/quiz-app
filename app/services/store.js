@@ -24,7 +24,7 @@ export default Ember.Service.extend({
     },
 
     makeNewPoll(poll) {
-      let pollObject = {
+      const pollObject = {
         poll: {
           "name": "Poll from ember app",
           "questions": [
@@ -65,6 +65,11 @@ export default Ember.Service.extend({
     }
 
 
+    // const poll = Poll.create({
+    //   questions: [],
+    //   options: [],
+    //   votes: []
+    // })
 
   // getPolls() {
   //   return [
