@@ -1,8 +1,8 @@
 <form>
 <label>Title:</label> <!-- This will be dynamic depending on question for poll -->
   {{input type='text' name=name placeholder="i.e: Wynsuperlatives"}}
-    {{#each formQuestions as |question|}}
-      {{question-builder  question}}
+    {{#each formObject.questions as |question|}}
+      {{question-builder question}}
     {{/each}}
   <button {{action 'addQuestion'}}>Add Question</button>
   <button type='submit'  {{action 'createPoll' on='submit'}}>Create Poll</button>

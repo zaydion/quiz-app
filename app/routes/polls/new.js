@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model(params) {
     const store = this.get('store');
-    console.log(params);
+    // console.log(params);
     // return store.makeNewPoll(params);
   },
 

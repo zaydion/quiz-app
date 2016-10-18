@@ -14,7 +14,7 @@ export default Ember.Service.extend({
         success: function(data) {
           data.forEach(function(poll) {
             polls.pushObject(poll);
-            console.log(polls);
+            // console.log(polls);
           });
         }
       });
@@ -30,7 +30,7 @@ export default Ember.Service.extend({
           "questions": [
             {
               "id": 1,
-              "prompt": "what is your favorite conding language?",
+              "prompt": "what is your favorite coding language?",
               "poll_id": 1,
               "options": [
                 {
@@ -56,7 +56,7 @@ export default Ember.Service.extend({
         ]
       }
     }
-      console.log(poll);
+      // console.log(poll);
       $.ajax({
         method: 'POST',
         url: 'http://localhost:3000/polls/new',
