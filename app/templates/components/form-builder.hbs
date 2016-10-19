@@ -1,11 +1,19 @@
 <form>
 <label>Title:</label> <!-- This will be dynamic depending on question for poll -->
-  {{input type='text' name=name placeholder="i.e: Wynsuperlatives"}}
+  {{input type='text' name=name placeholder="give your poll a title"}}
     {{#each formObject.questions as |question|}}
-      {{question-builder question}}
+    <div>
+      <ul>
+        <li>
+          {{question-builder question}}
+        </li>
+        <li>
+          <button {{action 'removeQuestion' question}}>remove question</button>
+        </li>
+      </ul>
+    </div>
     {{/each}}
   <button {{action 'addQuestion'}}>Add Question</button>
   <button type='submit'  {{action 'createPoll' on='submit'}}>Create Poll</button>
 
 </form>
-  {{option-builder}}

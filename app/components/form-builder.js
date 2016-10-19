@@ -17,6 +17,11 @@ export default Ember.Component.extend({
     addQuestion() {
       this.get('formObject.questions').pushObject({name: "empty question"});
       console.log("added a question");
+    },
+    removeQuestion(question) {
+      let questions = this.get('formObject.questions');
+      questions.removeObject(question);
+      console.log('removed question');
     }
   }
 

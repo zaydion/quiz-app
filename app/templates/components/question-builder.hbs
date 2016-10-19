@@ -1,2 +1,18 @@
 <label>Question:</label> <!-- This will be dynamic depending on question for poll -->
-{{input value=question placeholder="i.e: which one would you prefer?"}}
+{{input value=question placeholder="enter a question"}}
+
+  {{#each questionObject.options as |option|}}
+  <div>
+    <ul>
+      <li>
+        {{option-builder option}}
+      </li>
+      <li>
+        <button {{action 'removeOption' option}}>x</button>
+      </li>
+    </ul>
+  </div>
+
+  {{/each}}
+  <button {{action 'addOption'}}>Add Option</button>
+
